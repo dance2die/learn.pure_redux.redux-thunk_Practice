@@ -4,24 +4,30 @@ import styled from 'styled-components'
 
 const WeatherList = styled.ul`
   list-style: none;
+  display: flex;
+  flex-direction: row;
 `
 
+const WeatherItemContainer = styled.li`
+  padding: 1rem;
+`
 const WeatherItemDetail = styled.section``
 
 function WeatherItem({ date, temperature, weatherName, weatherAbbr }) {
   return (
-    <li>
-      <h2>{date}</h2>
+    <WeatherItemContainer>
+      <h3>{date}</h3>
       <img
         alt={weatherName}
         src={`https://weather.daveceddia.com/static/img/weather/png/64/${weatherAbbr}.png`}
       />
       <WeatherItemDetail>
-        <div>{parseInt(temperature)}°</div>
+        <div>
+          <strong>{parseInt(temperature)}°</strong>
+        </div>
         <div>{weatherName}</div>
-        <hr />
       </WeatherItemDetail>
-    </li>
+    </WeatherItemContainer>
   )
 }
 
