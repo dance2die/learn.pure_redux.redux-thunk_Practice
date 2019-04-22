@@ -12,7 +12,7 @@ const initialState = {
 
 function reducer(state = initialState, action) {
   switch (action.type) {
-    case SEARCH.SEARCH:
+    case SEARCH.BEGIN:
       return {
         ...state,
         isLoading: true,

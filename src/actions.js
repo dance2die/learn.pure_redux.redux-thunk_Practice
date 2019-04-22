@@ -1,4 +1,5 @@
 import { SEARCH } from './constants'
+// import store from './store'
 
 function search(query) {
   const toJson = _ => _.json()
